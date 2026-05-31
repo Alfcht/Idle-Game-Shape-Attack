@@ -1,0 +1,27 @@
+# Set default behavior to automatically normalize line endings and detect text
+* text=auto
+
+# Unity text files
+*.cs     text diff=csharp
+*.shader text
+*.cginc  text
+
+# Unity YAML files — help with merges and ensure consistent eol
+*.unity  text merge=unityyamlmerge eol=lf
+*.prefab text merge=unityyamlmerge eol=lf
+*.asset  text merge=unityyamlmerge eol=lf
+*.mat    text merge=unityyamlmerge eol=lf
+*.meta   text merge=unityyamlmerge eol=lf
+
+# Images/audio/other binary files
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.psd    binary
+*.mp3    binary
+*.wav    binary
+*.ogg    binary
+
+# Prevent CRLF normalization for binary blobs
+binary  -text
